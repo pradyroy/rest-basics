@@ -43,3 +43,5 @@ java -jar target/rest-basics-0.1.0.jar
 NOTE: Java 8 is required as minimum JAVA/JRE version.
 
 The API will be accessible at http://localhost:8080/samples. 
+
+Download the postman collection json file at: http://pradyroy.in/rest-basics/REST-BASICS.postman_collection
