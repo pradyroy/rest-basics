@@ -1,0 +1,8 @@
+---
+applications:
+- name: rest-basics
+  memory: 256M
+  instances: 1
+  host: samples-pradyroy
+  domain: in.pune.pradyroy
+  path: build/libs/rest-basics-0.1.0.jar
