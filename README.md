@@ -37,7 +37,7 @@ cd $project_root_dir
 ``` shell
 # in this case, the project root directory is "rest-basics"
 cd $project_root_dir
-java -jar target/gs-rest-service-0.1.0.jar
+java -jar target/rest-basics-0.1.0.jar
 ```
      
 NOTE: Java 8 is required as minimum JAVA/JRE version.
