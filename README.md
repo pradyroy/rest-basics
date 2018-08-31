@@ -1,5 +1,5 @@
 ## rest-basics
-Scaffold for starting a simple REST api project using Spring MVC. For practice by college students or trainees.
+Scaffold for starting a simple REST api project for CRUD operations on a model using Spring MVC. It can be useful for beginners (students) attempting to practice on the topic.
 
 ### Requires JDK 8 as minimum version and Maven 3.x.x for compile and build
 
