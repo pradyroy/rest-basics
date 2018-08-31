@@ -8,6 +8,17 @@
 	},
 	"item": [
 		{
+			"name": "Heartbeat",
+			"request": {
+				"url": "http://localhost:8080/samples/heartbeat",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "Create SampleModel-1",
 			"request": {
 				"url": "http://localhost:8080/samples",
