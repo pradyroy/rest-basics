@@ -11,6 +11,11 @@ import in.pune.pradyroy.model.RespModel;
 import in.pune.pradyroy.model.RespModelDeleted;
 import in.pune.pradyroy.model.SampleModel;
 
+/**
+ * 
+ * @author Pradyumna Roy
+ *
+ */
 @Service
 public class SampleSrvc extends BaseAbstractSrvc<SampleModel, Integer> {
 	

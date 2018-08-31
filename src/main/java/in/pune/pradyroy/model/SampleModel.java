@@ -1,5 +1,10 @@
 package in.pune.pradyroy.model;
 
+/**
+ * 
+ * @author Pradyumna Roy
+ *
+ */
 public class SampleModel extends BaseModel {
 
     private Integer id;

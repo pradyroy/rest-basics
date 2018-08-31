@@ -12,6 +12,11 @@ import in.pune.pradyroy.model.RespModelDeleted;
 import in.pune.pradyroy.model.SampleModel;
 import in.pune.pradyroy.srvc.SampleSrvc;
 
+/**
+ * 
+ * @author Pradyumna Roy
+ *
+ */
 @RestController
 @RequestMapping("/samples")
 public class SampleController extends BaseAbstractCtrlr<SampleModel, Integer> {
