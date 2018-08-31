@@ -1,5 +1,7 @@
 package in.pune.pradyroy.ctrlr;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -54,6 +56,11 @@ public class SampleController extends BaseAbstractCtrlr<SampleModel, Integer> {
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<ModelDeleted> delete(@PathVariable(value = "id") Integer id) {
 		return deleteModel(id);
+	}
+	
+	@RequestMapping(value="heartbeat", method = RequestMethod.GET)
+	public String heartbeat() {
+		return "rest-basics server date: " + new Date().toString();
 	}
 
 }
