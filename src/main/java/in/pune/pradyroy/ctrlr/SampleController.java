@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.pune.pradyroy.model.RespModelDeleted;
+import in.pune.pradyroy.model.ModelDeleted;
 import in.pune.pradyroy.model.SampleModel;
 import in.pune.pradyroy.srvc.SampleSrvc;
 
@@ -52,7 +52,7 @@ public class SampleController extends BaseAbstractCtrlr<SampleModel, Integer> {
 
 	@Override
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<RespModelDeleted> delete(@PathVariable(value = "id") Integer id) {
+	public ResponseEntity<ModelDeleted> delete(@PathVariable(value = "id") Integer id) {
 		return deleteModel(id);
 	}
 

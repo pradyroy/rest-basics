@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 import in.pune.pradyroy.Const;
 import in.pune.pradyroy.model.BaseModel;
+import in.pune.pradyroy.model.ModelDeleted;
 import in.pune.pradyroy.model.RespListOfModels;
 import in.pune.pradyroy.model.RespModel;
 import in.pune.pradyroy.model.RespModelDeleted;
@@ -45,7 +46,7 @@ public abstract class BaseAbstractCtrlr<M extends BaseModel, ID> {
 
 	public abstract ResponseEntity<M> update(ID id, M modelToBeMerged);
 
-	public abstract ResponseEntity<RespModelDeleted> delete(ID id);
+	public abstract ResponseEntity<ModelDeleted> delete(ID id);
 
 	/**
 	 * 
@@ -118,13 +119,14 @@ public abstract class BaseAbstractCtrlr<M extends BaseModel, ID> {
 	 * @param id
 	 * @return
 	 */
-	protected ResponseEntity<RespModelDeleted> deleteModel(ID id) {
-		ResponseEntity<RespModelDeleted> responseEntity;
+	protected ResponseEntity<ModelDeleted> deleteModel(ID id) {
+		ResponseEntity<ModelDeleted> responseEntity;
 		HttpHeaders headers = new HttpHeaders();
 		RespModelDeleted respModelDeleted = srvc.delete(id);
+		ModelDeleted modelDeleted = new ModelDeleted(respModelDeleted.getModelname(), respModelDeleted.getModelId(), respModelDeleted.getIsdeleted());
 		headers.add(Const.HTTP_HEADER_RESP_MSG_KEY, respModelDeleted.getRespmsgkey());
 		headers.add(Const.HTTP_HEADER_RESP_MSG_VAL, respModelDeleted.getRespmsgval());
-		responseEntity = new ResponseEntity<RespModelDeleted>(respModelDeleted, headers,
+		responseEntity = new ResponseEntity<ModelDeleted>(modelDeleted, headers,
 				respModelDeleted.getHttpstatus());
 		return responseEntity;
 	}
